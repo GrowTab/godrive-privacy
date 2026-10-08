@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="GoDrive Privacy Policy: what data the GoDrive ride hailing app collects, how it is used, and your choices.">
+<title>GoDrive Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap">
+
+<style>
+/* ── Layout: sticky TOC sidebar on desktop, single column on mobile
+   ── Colors: GoDrive navy + teal accent, readable warm-off-white ground */
+
+:root {
+  --navy:    #0A1828;
+  --teal:    #1CE5C5;
+  --teal-dim:#13B09A;
+  --bg:      #F7F9FC;
+  --surface: #FFFFFF;
+  --border:  #E2E8F0;
+  --fg:      #1A2535;
+  --fg-2:    #4A5568;
+  --fg-3:    #718096;
+  --tag-bg:  #E8FBF8;
+  --tag-fg:  #0E8A7A;
+
+  --font-display: 'Syne', sans-serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg:      #0A1828;
+    --surface: #0E1F32;
+    --border:  #1A2F47;
+    --fg:      #E8F0FA;
+    --fg-2:    #8FA9C8;
+    --fg-3:    #5A7A9A;
+    --tag-bg:  #0D2B27;
+    --tag-fg:  #1CE5C5;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg:      #0A1828;
+  --surface: #0E1F32;
+  --border:  #1A2F47;
+  --fg:      #E8F0FA;
+  --fg-2:    #8FA9C8;
+  --fg-3:    #5A7A9A;
+  --tag-bg:  #0D2B27;
+  --tag-fg:  #1CE5C5;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.7;
+  padding-inline: 0;
+}
+
+/* ── Header ──────────────────────────────────────────────── */
+
+.site-header {
+  background: var(--navy);
+  padding-block: 0;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  padding-block: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo-mark {
+  width: 36px;
+  height: 36px;
+  background: var(--teal);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-mark svg {
+  width: 20px;
+  height: 20px;
+}
+
+.logo-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: #ffffff;
+  letter-spacing: -0.3px;
+}
+
+.header-tag {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--teal);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(28,229,197,0.35);
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+/* ── Hero band ───────────────────────────────────────────── */
+
+.hero {
+  background: var(--navy);
+  padding-block: 52px 60px;
+  padding-inline: 24px;
+  text-align: center;
+  border-bottom: 3px solid var(--teal);
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--teal);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.hero-eyebrow::before,
+.hero-eyebrow::after {
+  content: '';
+  width: 28px;
+  height: 1px;
+  background: rgba(28,229,197,0.45);
+}
+
+.hero h1 {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 5vw, 48px);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.15;
+  text-wrap: balance;
+  letter-spacing: -0.02em;
+}
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--teal);
+}
+
+.hero-meta {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.55);
+}
+
+.hero-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ── Page shell ──────────────────────────────────────────── */
+
+.page {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 24px;
+  padding-block: 56px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .page {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-block: 32px;
+  }
+}
+
+/* ── Table of contents ───────────────────────────────────── */
+
+.toc {
+  position: sticky;
+  top: 24px;
+}
+
+.toc-label {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--border);
+}
+
+.toc-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.toc-list a {
+  display: block;
+  font-size: 13.5px;
+  color: var(--fg-2);
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  line-height: 1.4;
+  transition: background 0.15s, color 0.15s;
+}
+
+.toc-list a:hover,
+.toc-list a.active {
+  background: var(--tag-bg);
+  color: var(--tag-fg);
+}
+
+.toc-list a.active {
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .toc {
+    position: static;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .toc-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .toc-list a {
+    border: 1px solid var(--border);
+    padding: 5px 10px;
+    font-size: 12.5px;
+  }
+  .toc-list a:hover {
+    background: var(--tag-bg);
+    border-color: var(--teal-dim);
+  }
+}
+
+/* ── Content ─────────────────────────────────────────────── */
+
+.content {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.section {
+  padding-block: 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section:first-child {
+  padding-top: 0;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section-num {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal-dim);
+  margin-bottom: 10px;
+}
+
+.section h2 {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 3vw, 26px);
+  font-weight: 700;
+  color: var(--fg);
+  line-height: 1.25;
+  text-wrap: balance;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+  scroll-margin-top: 32px;
+}
+
+.section p {
+  color: var(--fg-2);
+  font-size: 15px;
+  margin-bottom: 14px;
+  max-width: 68ch;
+}
+
+.section p:last-child {
+  margin-bottom: 0;
+}
+
+.section ul, .section ol {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-block: 14px;
+  max-width: 68ch;
+}
+
+.section li {
+  font-size: 15px;
+  color: var(--fg-2);
+  padding-left: 22px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.section li::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  opacity: 0.7;
+}
+
+.section ol li {
+  counter-increment: list-counter;
+}
+
+.section ol {
+  counter-reset: list-counter;
+}
+
+.section ol li::before {
+  content: counter(list-counter);
+  background: none;
+  border-radius: 0;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--teal-dim);
+  top: 2px;
+  left: 0;
+  width: auto;
+  height: auto;
+}
+
+/* Info card */
+.info-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--teal);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 20px;
+  margin-block: 20px;
+  max-width: 68ch;
+}
+
+.info-card p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Data table */
+.data-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-block: 18px;
+  max-width: 68ch;
+}
+
+@media (max-width: 560px) {
+  .data-grid { grid-template-columns: 1fr; }
+}
+
+.data-cell {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.data-cell-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  margin-bottom: 6px;
+}
+
+.data-cell-value {
+  font-size: 13.5px;
+  color: var(--fg-2);
+  line-height: 1.5;
+}
+
+/* Tag chips */
+.chip {
+  display: inline-block;
+  background: var(--tag-bg);
+  color: var(--tag-fg);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 10px;
+  border-radius: 100px;
+  border: 1px solid rgba(28,229,197,0.25);
+}
+
+/* Contact card */
+.contact-card {
+  background: var(--navy);
+  border-radius: 14px;
+  padding: 28px 28px;
+  margin-top: 24px;
+  max-width: 68ch;
+}
+
+.contact-card h3 {
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.contact-card p {
+  color: rgba(255,255,255,0.6);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.contact-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(28,229,197,0.12);
+  border: 1px solid rgba(28,229,197,0.25);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact-icon svg {
+  width: 15px;
+  height: 15px;
+  stroke: var(--teal);
+}
+
+.contact-text {
+  font-size: 14px;
+  color: rgba(255,255,255,0.75);
+  font-family: var(--font-body);
+  user-select: all;
+}
+
+/* ── Footer ──────────────────────────────────────────────── */
+
+footer {
+  border-top: 1px solid var(--border);
+  padding-block: 28px;
+  padding-inline: 24px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--fg-3);
+}
+
+footer strong {
+  color: var(--fg-2);
+}
+
+/* ── Focus ───────────────────────────────────────────────── */
+
+a:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
+</style>
+</head>
+<body>
+<!-- Header -->
+<header class="site-header">
+  <div class="header-inner">
+    <a href="#" class="logo" aria-label="GoDrive">
+      <div class="logo-mark">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 13.5C4 13.5 3 12 3 9.5C3 6.5 6 4 10 4C14 4 17 6.5 17 9.5C17 12 16 13.5 16 13.5" stroke="#0A1828" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M7 13.5H13" stroke="#0A1828" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="7" cy="15" r="1.5" fill="#0A1828"/>
+          <circle cx="13" cy="15" r="1.5" fill="#0A1828"/>
+          <path d="M10 4V7" stroke="#0A1828" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M6.5 5.5L8 7.5" stroke="#0A1828" stroke-width="1.5" stroke-linecap="round"/>
+          <path d="M13.5 5.5L12 7.5" stroke="#0A1828" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <span class="logo-name">GoDrive</span>
+    </a>
+    <span class="header-tag">Privacy Policy</span>
+  </div>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-eyebrow">Legal</div>
+  <h1>Your Privacy Matters to <em>GoDrive</em></h1>
+  <div class="hero-meta">
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      Effective: 1 October 2026
+    </span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      Last updated: 8 October 2026
+    </span>
+    <span>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Pakistan · EV Ride-Hailing
+    </span>
+  </div>
+</div>
+
+<!-- Main -->
+<div class="page">
+
+  <!-- TOC -->
+  <nav class="toc" aria-label="Table of contents">
+    <div class="toc-label">Contents</div>
+    <ul class="toc-list" id="toc-list">
+      <li><a href="#s1">Information We Collect</a></li>
+      <li><a href="#s2">How We Use It</a></li>
+      <li><a href="#s3">Sharing Your Data</a></li>
+      <li><a href="#s4">Location Data</a></li>
+      <li><a href="#s5">Payments &amp; Wallet</a></li>
+      <li><a href="#s6">Data Retention</a></li>
+      <li><a href="#s7">Your Rights</a></li>
+      <li><a href="#s8">Push Notifications</a></li>
+      <li><a href="#s9">Children's Privacy</a></li>
+      <li><a href="#s10">Policy Changes</a></li>
+      <li><a href="#s11">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Content -->
+  <main class="content">
+
+    <div class="section" id="intro">
+      <p>GoDrive is an electric vehicle ride-hailing service connecting riders and drivers across Pakistan. This Privacy Policy explains what personal information we collect when you use the GoDrive app, how we use it, and the choices you have. By creating an account or using our services, you agree to the practices described here.</p>
+      <div class="info-card">
+        <p><strong>Plain language first.</strong> We have written this policy to be readable, not just legally complete. If any section is unclear, email us — the address is at the bottom.</p>
+      </div>
+    </div>
+
+    <div class="section" id="s1">
+      <span class="section-num">01</span>
+      <h2>Information We Collect</h2>
+      <p>We collect information you give us directly, information generated when you use the app, and information from your device.</p>
+
+      <div class="data-grid">
+        <div class="data-cell">
+          <div class="data-cell-label">Account</div>
+          <div class="data-cell-value">Name, phone number, email address, profile photo, role (rider or driver)</div>
+        </div>
+        <div class="data-cell">
+          <div class="data-cell-label">Location</div>
+          <div class="data-cell-value">Real-time GPS coordinates during an active ride; pickup and destination addresses for every trip</div>
+        </div>
+        <div class="data-cell">
+          <div class="data-cell-label">Trip records</div>
+          <div class="data-cell-value">Ride history, fare amounts, timestamps, route data, payment method, ratings given and received</div>
+        </div>
+        <div class="data-cell">
+          <div class="data-cell-label">Payments</div>
+          <div class="data-cell-value">Wallet balance and transaction history; top-up and withdrawal records</div>
+        </div>
+        <div class="data-cell">
+          <div class="data-cell-label">Device</div>
+          <div class="data-cell-value">Device model, OS version, app version, FCM push notification token, IP address</div>
+        </div>
+        <div class="data-cell">
+          <div class="data-cell-label">Communications</div>
+          <div class="data-cell-value">In-ride chat messages between rider and driver; safety and emergency contact details you add</div>
+        </div>
+      </div>
+
+      <p><strong>Driver-specific data.</strong> If you register as a driver, we also collect your vehicle details (type, licence plate), National Identity Card (NIC) number and photo for identity verification, driver's licence scan, and bank account or payment details for earnings withdrawal.</p>
+    </div>
+
+    <div class="section" id="s2">
+      <span class="section-num">02</span>
+      <h2>How We Use Your Information</h2>
+      <p>We use the information we collect to provide, improve, and protect the GoDrive service:</p>
+      <ul>
+        <li>Match riders with nearby available drivers and dispatch rides</li>
+        <li>Calculate fares, process payments, and maintain wallet balances</li>
+        <li>Send push notifications about ride status (driver en route, arrival, trip start, completion)</li>
+        <li>Display driver location on the in-app map during an active ride</li>
+        <li>Enforce safety features — SOS alerts, emergency contact sharing, and live trip sharing links</li>
+        <li>Detect and prevent fraud, account abuse, and policy violations</li>
+        <li>Resolve disputes, investigate complaints, and respond to support requests</li>
+        <li>Improve dispatch algorithms, EV route optimisation, and app performance using aggregated trip data</li>
+        <li>Comply with applicable laws, including Anti-Money Laundering (AML) regulations in Pakistan</li>
+      </ul>
+      <p>We do not sell your personal information to advertisers or data brokers.</p>
+    </div>
+
+    <div class="section" id="s3">
+      <span class="section-num">03</span>
+      <h2>Sharing Your Data</h2>
+      <p>We share personal information only in the limited circumstances described below.</p>
+
+      <p><strong>With your matched driver or rider.</strong> When a ride is confirmed, the rider sees the driver's first name, vehicle plate, rating, and live location. The driver sees the rider's first name, pickup address, and destination. Neither party sees the other's phone number; calls are routed through the app.</p>
+
+      <p><strong>With service providers.</strong> We use third-party providers to operate the service:</p>
+      <ul>
+        <li><span class="chip">Supabase</span> — database hosting and authentication (servers in the EU/US)</li>
+        <li><span class="chip">Firebase (Google)</span> — push notification delivery via FCM</li>
+        <li><span class="chip">Google Maps</span> — mapping, geocoding, and route calculation</li>
+      </ul>
+      <p>Each provider is contractually required to protect your data and use it only for the services they perform for us.</p>
+
+      <p><strong>For legal reasons.</strong> We may disclose information if required by Pakistani law, a valid court order, or to protect the rights, property, and safety of users or others.</p>
+
+      <p><strong>Business transfers.</strong> If GoDrive merges, is acquired, or sells its assets, user information may be transferred. We will notify users before data is subject to a different privacy policy.</p>
+
+      <div class="info-card">
+        <p>We never share your real-time location with anyone except the driver or rider matched to your active ride, and only for the duration of that ride.</p>
+      </div>
+    </div>
+
+    <div class="section" id="s4">
+      <span class="section-num">04</span>
+      <h2>Location Data</h2>
+      <p>GoDrive is a location-based service; accurate GPS is necessary to match riders, navigate drivers, and calculate fares. Here is exactly how we use your location:</p>
+
+      <ul>
+        <li><strong>Riders — during a ride.</strong> Your pickup and destination are stored as part of the trip record. We do not collect continuous background location from riders outside an active ride.</li>
+        <li><strong>Drivers — foreground and background.</strong> The app collects driver location continuously while the driver is marked as "available" or has an active ride. This powers the real-time map and allows the dispatch system to offer nearby rides. Location updates stop when the driver goes offline.</li>
+        <li><strong>Historical trip routes</strong> are stored to support fare disputes and safety investigations. Routes older than 12 months are anonymised.</li>
+      </ul>
+
+      <p>You can revoke location permission at any time in your device settings. Doing so will prevent you from using the ride-hailing features of the app.</p>
+    </div>
+
+    <div class="section" id="s5">
+      <span class="section-num">05</span>
+      <h2>Payments &amp; Wallet</h2>
+      <p>GoDrive operates an in-app wallet (in Pakistani Rupees) for cashless rides and driver earnings. We store your wallet balance, transaction history, and top-up records on our servers. We do not store full bank account numbers or card numbers on our platform — payment processing uses third-party payment gateways that are PCI-DSS compliant.</p>
+      <p>Driver earnings withdrawal records are retained for seven years to comply with tax and financial regulations in Pakistan. Rider payment history is retained for three years.</p>
+    </div>
+
+    <div class="section" id="s6">
+      <span class="section-num">06</span>
+      <h2>Data Retention</h2>
+      <p>We keep your information for as long as your account is active or as needed to provide our services. Specific retention periods:</p>
+      <ul>
+        <li><strong>Account data</strong> — retained while the account is active; deleted within 90 days of a verified deletion request</li>
+        <li><strong>Trip records</strong> — retained for 3 years for dispute resolution and safety investigations</li>
+        <li><strong>Location data</strong> — real-time data discarded after a ride ends; route logs anonymised after 12 months</li>
+        <li><strong>Chat messages</strong> — deleted 30 days after a ride is completed</li>
+        <li><strong>Driver verification documents</strong> — retained for 5 years after the driver account is closed to comply with legal requirements</li>
+        <li><strong>Financial records</strong> — retained for 7 years to comply with Pakistani tax law</li>
+      </ul>
+    </div>
+
+    <div class="section" id="s7">
+      <span class="section-num">07</span>
+      <h2>Your Rights</h2>
+      <p>You have the following rights over your personal data:</p>
+      <ul>
+        <li><strong>Access.</strong> Request a copy of the personal data we hold about you.</li>
+        <li><strong>Correction.</strong> Update inaccurate name, phone number, or email from within the app profile screen.</li>
+        <li><strong>Deletion.</strong> Request that we delete your account and associated data. We will process this within 30 days, subject to legal retention obligations described above.</li>
+        <li><strong>Restriction.</strong> Ask us to stop processing your data while a dispute is being resolved.</li>
+        <li><strong>Portability.</strong> Request a machine-readable export of your trip history and account data.</li>
+        <li><strong>Objection.</strong> Object to processing based on our legitimate interests.</li>
+      </ul>
+      <p>To exercise any of these rights, email <strong>pjbsk8661@gmail.com</strong> from the address registered to your account. We will respond within 30 days.</p>
+    </div>
+
+    <div class="section" id="s8">
+      <span class="section-num">08</span>
+      <h2>Push Notifications</h2>
+      <p>GoDrive sends push notifications via Firebase Cloud Messaging (FCM) to keep you informed about ride status, driver arrival, trip completion, wallet activity, and account alerts.</p>
+      <p>Your FCM device token is stored in our database and used solely to deliver notifications to your device. We do not share device tokens with third parties. When you sign out, your token is removed and notifications stop.</p>
+      <p>You can disable push notifications at any time in your device's notification settings. Disabling notifications does not affect the functionality of the app, but you will not receive real-time ride status updates while the app is closed.</p>
+    </div>
+
+    <div class="section" id="s9">
+      <span class="section-num">09</span>
+      <h2>Children's Privacy</h2>
+      <p>GoDrive is not directed to children under the age of 13. We do not knowingly collect personal information from anyone under 13. If we learn that a child under 13 has provided us with personal information, we will delete it immediately. If you believe a child has submitted information to us, contact us at <strong>pjbsk8661@gmail.com</strong>.</p>
+    </div>
+
+    <div class="section" id="s10">
+      <span class="section-num">10</span>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy from time to time. When we make material changes, we will:</p>
+      <ul>
+        <li>Update the "Last updated" date at the top of this page</li>
+        <li>Send a push notification or in-app notice to all active users at least 7 days before the changes take effect</li>
+        <li>For significant changes that affect your rights, ask for your renewed consent before you can continue using the app</li>
+      </ul>
+      <p>Continued use of the GoDrive app after the effective date constitutes acceptance of the updated policy. If you do not agree to the changes, you can delete your account before the effective date.</p>
+    </div>
+
+    <div class="section" id="s11">
+      <span class="section-num">11</span>
+      <h2>Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy or how your data is handled, please reach out to our Privacy Team.</p>
+
+      <div class="contact-card">
+        <h3>GoDrive Privacy Team</h3>
+        <p>We aim to respond to all privacy inquiries within 3 business days.</p>
+        <div class="contact-row">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <span class="contact-text">pjbsk8661@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <span class="contact-text">Pakistan</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<!-- Footer -->
+<footer>
+  <strong>GoDrive</strong> &mdash; Connecting Pakistan, one EV ride at a time.<br>
+  <span style="margin-top:6px;display:block">&copy; 2026 GoDrive. All rights reserved.</span>
+</footer>
+
+<script>
+// Highlight active TOC link on scroll
+(function () {
+  const sections = document.querySelectorAll('[id^="s"]');
+  const links = document.querySelectorAll('#toc-list a');
+  if (!sections.length || !links.length) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          links.forEach((l) => l.classList.remove('active'));
+          const active = document.querySelector('#toc-list a[href="#' + entry.target.id + '"]');
+          if (active) active.classList.add('active');
+        }
+      });
+    },
+    { rootMargin: '-20% 0px -70% 0px' }
+  );
+
+  sections.forEach((s) => observer.observe(s));
+})();
+</script>
+</body>
+</html>
