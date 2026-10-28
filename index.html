@@ -567,7 +567,7 @@ a:focus-visible {
     </span>
     <span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      Last updated: 8 October 2026
+      Last updated: 28 October 2026
     </span>
     <span>
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -631,7 +631,7 @@ a:focus-visible {
         </div>
         <div class="data-cell">
           <div class="data-cell-label">Device</div>
-          <div class="data-cell-value">Device model, OS version, app version, FCM push notification token, IP address</div>
+          <div class="data-cell-value">Device model, OS version, app version, FCM push notification token, IP address, Android advertising ID, crash logs and diagnostics</div>
         </div>
         <div class="data-cell">
           <div class="data-cell-label">Communications</div>
@@ -655,9 +655,10 @@ a:focus-visible {
         <li>Detect and prevent fraud, account abuse, and policy violations</li>
         <li>Resolve disputes, investigate complaints, and respond to support requests</li>
         <li>Improve dispatch algorithms, EV route optimisation, and app performance using aggregated trip data</li>
+        <li>Show optional rewarded video ads to drivers who choose to watch them, and credit the reward to their wallet</li>
         <li>Comply with applicable laws, including Anti-Money Laundering (AML) regulations in Pakistan</li>
       </ul>
-      <p>We do not sell your personal information to advertisers or data brokers.</p>
+      <p>We do not sell your personal information to advertisers or data brokers. The limited device data shared with Google AdMob for optional driver ads is described under “Sharing Your Data”.</p>
     </div>
 
     <div class="section" id="s3">
@@ -672,8 +673,12 @@ a:focus-visible {
         <li><span class="chip">Supabase</span> — database hosting and authentication (servers in the EU/US)</li>
         <li><span class="chip">Firebase (Google)</span> — push notification delivery via FCM</li>
         <li><span class="chip">Google Maps</span> — mapping, geocoding, and route calculation</li>
+        <li><span class="chip">Google AdMob</span> — rewarded video ads in the driver app (see “Advertising” below)</li>
       </ul>
       <p>Each provider is contractually required to protect your data and use it only for the services they perform for us.</p>
+
+      <p><strong>Advertising (Google AdMob).</strong> Drivers can choose to watch short rewarded video ads in the “Watch ads &amp; earn” section of the driver app. Riders are not shown ads. When an ad is requested, the Google Mobile Ads SDK collects and shares with Google: your device’s Android advertising ID, approximate location derived from your IP address, app interaction data (such as ad views and taps), and crash logs and diagnostics. Google uses this data to serve and measure ads, prevent ad fraud, and for analytics, as described in <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google uses information from sites or apps that use its services</a>. Your name, phone number, trip history and precise GPS location are never shared with advertisers.</p>
+      <p>You can reset your advertising ID or opt out of personalised ads at any time in your device settings (Settings → Google → Ads, or Settings → Privacy → Ads on newer Android versions). Watching ads is always optional.</p>
 
       <p><strong>For legal reasons.</strong> We may disclose information if required by Pakistani law, a valid court order, or to protect the rights, property, and safety of users or others.</p>
 
